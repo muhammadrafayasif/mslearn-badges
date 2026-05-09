@@ -38,7 +38,7 @@ jobs:
       - name: Fetch MS Learn Badges
         uses: muhammadrafayasif/MS Learn-badges@main
         with:
-          MS Learn-username: "[username]"
+          mslearn-username: "[username]"
           output-path: "badges"
           
       - name: Commit updated badges
