@@ -1,0 +1,52 @@
+name: "Fetch Microsoft Learn Badges"
+description: "Scrapes Microsoft Learn badges for a user and adds them to your README file."
+author: "Muhammad Rafay"
+
+branding:
+  icon: "award"
+  color: "blue"
+
+inputs:
+  mslearn-username:
+    description: "The Microsoft Learn username to scrape badges from"
+    required: true
+  commit:
+    description: "Whether to commit and push updated badges"
+    required: false
+    default: "false"
+  github-token:
+    description: "GitHub token to commit and push changes"
+    required: false
+    default: ""
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install svgwrite requests playwright
+        playwright install chromium
+      shell: bash
+
+    - name: Run fetch-badges.py
+      run: |
+        python "$GITHUB_ACTION_PATH/fetch-badges.py" "${{ inputs.mslearn-username }}"
+      shell: bash
+
+    - name: Commit and push badges
+      if: ${{ inputs.commit == 'true' }}
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add "${{ inputs.output-path }}/"
+        git commit -m "chore: update Microsoft Learn badges [skip ci]" || echo "No changes to commit"
+        git push
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
