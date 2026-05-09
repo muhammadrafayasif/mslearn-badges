@@ -31,21 +31,11 @@ def main(username):
         START_TAG = "<!-- START_MICROSOFT_LEARN_BADGES -->"
         END_TAG = "<!-- END_MICROSOFT_LEARN_BADGES -->"
 
-        TABLE_WIDTH = 4 * 200  # 800px — matches 4 cells × 200px each
-
-        chunks = [metadata[i:i+4] for i in range(0, len(metadata), 4)]
-        content = ""
-
-        for chunk in chunks:
-            content += f"<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"{TABLE_WIDTH}\"><tr>"
-            for i in chunk:
-                content += (
-                    f"<td align=\"center\" width=\"200\">"
-                    f"<a href=\"https://learn.microsoft.com/en-us/users/{username}\">"
-                    f"<img src=\"https://learn.microsoft.com{i['src']}\" height=\"100\"/>"
-                    f"</a><br/><sub><b>{i['alt']}</b></sub></td>"
-                )
-            content += "</tr></table>"
+        content = str()
+        for i in metadata:
+            content += (
+                f"<a href=\"learn.microsoft.com/en-us/users/{username}/achievements\"><img alt=\"{i['alt']}\" src=\"https://learn.microsoft.com{i['src']}\" height=\"100\" width=\"100\"/></a>\n"
+            )
 
         updated = replace_section(readme, START_TAG, END_TAG, content)
 

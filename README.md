@@ -17,7 +17,7 @@ Automatically scrape your **MS Learn badges** and generate a neat grid that you 
 Add the following workflow to `.github/workflows/daily-badges.yml` in your repo:
 
 >[!NOTE]
-> Replace `mslearn-username` with your username from MS Learn
+> Replace `mslearn-username` with your username from Microsoft Learn
 
 ```yaml
 name: Daily Microsoft Learn Badges
@@ -53,5 +53,10 @@ jobs:
 ```
 ## 🖼️ Demonstration
 <!-- START_MICROSOFT_LEARN_BADGES -->
-<table border="0" cellspacing="0" cellpadding="0" width="800"><tr><td align="center" width="200"><a href="https://learn.microsoft.com/en-us/users/muhammadrafayasif"><img src="https://learn.microsoft.com/en-us/training/achievements/create-machine-learning-models.svg" height="100"/></a><br/><sub><b>Create machine learning models</b></sub></td><td align="center" width="200"><a href="https://learn.microsoft.com/en-us/users/muhammadrafayasif"><img src="https://learn.microsoft.com/en-us/training/achievements/train-and-evaluate-deep-learning-models.svg" height="100"/></a><br/><sub><b>Train and evaluate deep learning models</b></sub></td><td align="center" width="200"><a href="https://learn.microsoft.com/en-us/users/muhammadrafayasif"><img src="https://learn.microsoft.com/en-us/training/achievements/train-and-evaluate-regression-models.svg" height="100"/></a><br/><sub><b>Train and evaluate regression models</b></sub></td><td align="center" width="200"><a href="https://learn.microsoft.com/en-us/users/muhammadrafayasif"><img src="https://learn.microsoft.com/en-us/training/achievements/train-and-evaluate-clustering-models.svg" height="100"/></a><br/><sub><b>Train and evaluate clustering models</b></sub></td></tr></table><table border="0" cellspacing="0" cellpadding="0" width="800"><tr><td align="center" width="200"><a href="https://learn.microsoft.com/en-us/users/muhammadrafayasif"><img src="https://learn.microsoft.com/en-us/training/achievements/explore-and-analyze-data-with-python.svg" height="100"/></a><br/><sub><b>Explore and analyze data with Python</b></sub></td><td align="center" width="200"><a href="https://learn.microsoft.com/en-us/users/muhammadrafayasif"><img src="https://learn.microsoft.com/en-us/training/achievements/train-and-evaluate-classification-models.svg" height="100"/></a><br/><sub><b>Train and evaluate classification models</b></sub></td></tr></table>
+<a href="learn.microsoft.com/en-us/users/muhammadrafayasif/achievements"><img alt="Create machine learning models" src="https://learn.microsoft.com/en-us/training/achievements/create-machine-learning-models.svg" height="100" width="100"/></a>
+<a href="learn.microsoft.com/en-us/users/muhammadrafayasif/achievements"><img alt="Train and evaluate deep learning models" src="https://learn.microsoft.com/en-us/training/achievements/train-and-evaluate-deep-learning-models.svg" height="100" width="100"/></a>
+<a href="learn.microsoft.com/en-us/users/muhammadrafayasif/achievements"><img alt="Train and evaluate regression models" src="https://learn.microsoft.com/en-us/training/achievements/train-and-evaluate-regression-models.svg" height="100" width="100"/></a>
+<a href="learn.microsoft.com/en-us/users/muhammadrafayasif/achievements"><img alt="Train and evaluate clustering models" src="https://learn.microsoft.com/en-us/training/achievements/train-and-evaluate-clustering-models.svg" height="100" width="100"/></a>
+<a href="learn.microsoft.com/en-us/users/muhammadrafayasif/achievements"><img alt="Explore and analyze data with Python" src="https://learn.microsoft.com/en-us/training/achievements/explore-and-analyze-data-with-python.svg" height="100" width="100"/></a>
+<a href="learn.microsoft.com/en-us/users/muhammadrafayasif/achievements"><img alt="Train and evaluate classification models" src="https://learn.microsoft.com/en-us/training/achievements/train-and-evaluate-classification-models.svg" height="100" width="100"/></a>
 <!-- END_MICROSOFT_LEARN_BADGES -->
