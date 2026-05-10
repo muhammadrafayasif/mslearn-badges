@@ -1,11 +1,11 @@
 # 🏅 Microsoft Learn Badges GitHub Action
 
-Automatically scrape your **MS Learn badges** and generate a neat grid that you can use in your GitHub profile README.
+Automatically scrape your **Microsoft Learn badges** and generate a neat grid that you can use in your GitHub profile README.
 
 ---
 
 ## ✨ Features
-- Scrapes all badges from a given **MS Learn username**  
+- Scrapes all badges from a given **Microsoft Learn username**  
 - Dynamically updates the README of your profile to include all MS Learn badges
 - Runs **daily** or on manual dispatch  
 - Can be used as a **GitHub Action** or standalone script  
@@ -35,8 +35,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Fetch MS Learn Badges
-        uses: muhammadrafayasif/MS Learn-badges@main
+      - name: Fetch Microsoft Learn Badges
+        uses: muhammadrafayasif/mslearn-badges@main
         with:
           mslearn-username: "[username]"
           output-path: "badges"
@@ -46,7 +46,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "chore: update MS Learn badges [skip ci]" || echo "No changes to commit"
+          git commit -m "chore: update Microsoft Learn badges [skip ci]" || echo "No changes to commit"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
