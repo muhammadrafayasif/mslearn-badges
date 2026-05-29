@@ -34,7 +34,7 @@ def main(username):
         content = str()
         for i in metadata:
             content += (
-                f"<a href=\"learn.microsoft.com/en-us/users/{username}/achievements\"><img alt=\"{i['alt']}\" src=\"https://learn.microsoft.com{i['src']}\" height=\"100\"/></a>\n"
+                f"<a href=\"https://learn.microsoft.com/en-us/users/{username}/achievements\"><img alt=\"{i['alt']}\" src=\"https://learn.microsoft.com{i['src']}\" height=\"100\"/></a>\n"
             )
 
         updated = replace_section(readme, START_TAG, END_TAG, content)
